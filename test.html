@@ -5,16 +5,13 @@
             .centerXY{display:flex;justify-content:center;align-items:center;}
         </style>
     </head>
-    <body class="centerXY" style="height:120vw;">
-        <div id="middle" style="width:20vw;height:20vw;background-color:red;">
-        </div>
+    <body class="centerXY" style="height:120vh;">
+        <div id="middle" style="width:20vw;height:100vh;background-color:red;"></div>
     </body>
     <script>
-        Element.prototype.documentOffsetTop = function () {
-            return this.offsetTop + ( this.offsetParent ? this.offsetParent.documentOffsetTop() : 0 );
-        };
-
-        var top = document.getElementById( 'middle' ).documentOffsetTop() - (window.innerHeight / 2 );
-        window.scrollTo( 0, top );
+        setTimeout(function(){
+            var middle = document.getElementById("middle");
+            middle.scrollIntoView(true);
+        }, 1);
     </script>
 </html>
