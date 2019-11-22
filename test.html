@@ -3,16 +3,16 @@
         <title></title>
     </head>
     <body style="margin:0;padding:0;">
-        <div id="mainContent" style="width:20vw;height:200vh;background-color:blue;"></div>
+        <div id="mainContent" style="width:20vw;height:200vh;background-color:green;"></div>
     </body>
     <script>
         //Code that ensures that the main content will always be flush with the 
         //absolute top of the document.
         //This solves the issue of iOS Safari's tendancy to hide the top part of
         //the main content behind the address bar.
-        window.onload = function(){ 
+        setTimeout(function(){
             var mainContent = document.getElementById("mainContent");
             mainContent.scrollIntoView(true);
-        }
+        }, 1);
     </script>
 </html>
